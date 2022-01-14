@@ -1,0 +1,17 @@
+<section class="hero_banner">
+
+        <form method="post">
+            <label for="email">Votre email</label><br>
+            <input type="email" name="email" id="email"><br><br>
+        
+            
+            <label for="mdp">Votre mot de passe</label><br>
+            <input type="password" name="password" id="mdp"><br><br>
+
+            <button>Se connecter</button>
+        </form>
+
+        <% if(locals.message) { %>
+            <strong><%= message %></strong>
+        <% } %>
+</section>

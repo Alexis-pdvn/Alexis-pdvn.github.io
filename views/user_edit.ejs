@@ -1,0 +1,10 @@
+<h1>Modifier le profil d'<%= user.name %></h1>
+
+<form method="post">
+	<label>Modifier le nom indiquer sur la page d'accueil</label><br>
+	<input type="text" name="name" value="<%= user.name %>"><br><br>
+	<label>Modifier votre situation</label><br>
+	<textarea name="bio"><%= user.bio %></textarea><br><br>
+
+    <button>Mettre à jour</button>
+</form>

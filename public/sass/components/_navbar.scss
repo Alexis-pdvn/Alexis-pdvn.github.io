@@ -1,0 +1,36 @@
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  
+  .inner-width {
+    height: 176px;
+    position: relative;
+    background: linear-gradient(180deg, #1E1E1E 10.48%, rgba(30, 30, 30, 0.85) 47.49%, rgba(28, 28, 28, 0) 99.87%);
+        
+    .menu-toggle-btn {
+      position: absolute;
+      right: 0px;
+      top: 48px;
+    }
+
+    .navigation_bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 48px;
+      
+        .nav{
+            font-family: Spartan;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 16px;
+        }
+    }
+  }
+}

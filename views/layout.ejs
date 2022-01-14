@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio UX UI Agathe</title>
+    <link rel="stylesheet" href="/sass/main.css"/>
+    <link rel="stylesheet" href="/sass/main.css.map"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="active_loader">
+  <div class="back_loader">
+    <div id="loader">
+      <img id="box" src="icon/polygon_jaune.svg" alt="">
+    </div>
+  </div>
+  <header>
+   
+	<div class="inner-width">
+
+		<img src="icon/burger_menu.svg" alt="" class="menu-toggle-btn">
+
+		<nav class="navigation_bar">
+			<img src="icon/polygon_jaune.svg" alt="">
+			<a href="#" class="nav">UX & UI</a>
+			<a href="#" class="nav">Projets</a>
+			<a href="#" class="nav">CV</a>
+			<a href="#" class="nav">Contact</a>
+      
+    <% if(isAdmin == true){ %>
+			<a href="/dashboard" class="nav">Dashboard</a>
+			<a href="/logout" class="nav">Se déconnecter</a>
+    <%}%>
+		</nav>
+
+	</div>
+</header>
+
+<%- include(template) -%> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="/js/loader.js"></script>
+</body>
+</html>

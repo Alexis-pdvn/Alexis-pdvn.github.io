@@ -1,0 +1,10 @@
+<h1>Modifier la carte <%= card.id_card %></h1>
+
+<form method="post">
+	<label>Nom de la carte</label><br>
+	<input type="text" name="title" value="<%= card.title %>"><br><br>
+	<label>Description de la carte</label><br>
+	<textarea name="content"><%= card.content %></textarea><br><br>
+
+    <button>Enregistrer</button>
+</form>

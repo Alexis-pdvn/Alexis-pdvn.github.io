@@ -1,0 +1,17 @@
+<section class="hero_banner">
+
+        <% for( projet of dashboard){ %> 
+            <div>
+                <h1><%= projet.title %> </h1>
+                <p><%= projet.description %></p>
+                <img src="/img_projet/<%= projet.image_preview %>" alt="" style="width: 20%;">
+            </div>
+            <div class="icon">
+                <a href="/edit/<%= projet.id %>">Modifier</a>
+                <a href="/delete/<%= projet.id %>">supprimer</a>
+                <a href="/projet/<%= projet.id %>">voir</a>
+            </div>
+        <% } %>
+
+        <h1><a href="/">Voir la page accueil</a></h1>
+</section>

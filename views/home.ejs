@@ -1,0 +1,41 @@
+<section class="hero_banner">
+
+    <div class="hero_banner_text">
+            <h1><%= user.name %></h1>
+            <p><%= user.bio %></p>
+            <a href="#firstpart">
+            <img src="icon/arrow_down.svg" alt="arrow go down agathe portfolio" class="icon_hero_banner" loading="lazy">
+            </a>
+    <% if(isAdmin == true){ %>
+        <a href="/user_edit">Modiifer</a>
+    <%}%>
+    </div>
+</section>
+<section class="banner_ux" id="firstpart">
+    <h1 class="banner_ux_titre"><%= user.title_card %></h1>
+    
+    <div class="banner_ux_card container">
+
+        <% for(uxcard of cards){ %> 
+
+                <div class="card">
+                        <img src="icon/<%= uxcard.image  %>" alt="">
+                        <h1><%= uxcard.title  %></h1>
+                        <p><%= uxcard.content  %></p>
+                        <% if(isAdmin == true){ %>
+                            <a href="/card_edit/<%= uxcard.id_card %>">Modiifer</a>
+                        <%}%>
+                </div>
+                
+        <% } %>
+    </div>
+    
+</section>
+
+<section class="projets">
+    
+    <% if(isAdmin == true){ %>
+        <a href="/add_project">Ajouter un projet</a>
+        <a href="/dashboard">Voir la liste des projets</a>
+    <%}%>
+</section>
