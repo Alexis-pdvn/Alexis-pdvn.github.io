@@ -1,11 +1,11 @@
-.hero_banner{
+.hero_banner {
     background-image: url(../../images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;
 
-    &_text{
+    &_text {
         text-align: center;
         position: absolute;
         margin: auto;
@@ -15,7 +15,7 @@
         left: 0;
         height: 100px;
 
-        h1{
+        h1 {
             color: white;
             font-family: DM Serif Display;
             font-style: normal;
@@ -24,81 +24,139 @@
             margin: 0 0 10px 0;
         }
 
-        p{
+        p {
             font-family: Spartan;
             font-style: normal;
             font-weight: 500;
             font-size: 24px;
-            color: #F3E247;
+            color: #f3e247;
             margin: 0 0 50px 0;
         }
-        img{
+        img {
             animation: arrow_down 3s cubic-bezier(0.47, 0.01, 0.44, 0.99) infinite;
         }
     }
 }
 
 @keyframes arrow_down {
-    0%{
+    0% {
         transform: translateY(0px);
     }
-    50%{
+    50% {
         transform: translateY(10px);
     }
-    100%{
+    100% {
         transform: translateY(0px);
     }
-    
 }
 
-.banner_ux{
+.banner_ux {
     margin: 0 auto;
     background: #182726;
-    height: 394px;
+    padding-top: 56px;
+    padding-bottom: 56px;
 
-    &_titre{
+    &_titre {
         margin: 0 auto;
         text-align: center;
         font-family: DM Serif Display;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
-        color: #FFFFFF;
-        padding-top: 56px;
+        color: #ffffff;
         padding-bottom: 50px;
         width: 419px;
     }
 
-    &_card{
+    &_card {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        .card{
+        .card {
             text-align: center;
             width: 280px;
             margin: 0 auto;
 
-            h1{
+            h1 {
                 font-family: DM Serif Display;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 16px;
-                color: #FBFBFB;
+                color: #fbfbfb;
             }
 
-            p{
+            p {
                 font-family: DM Serif Display;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 16px;
-                color: #FBFBFB;
+                color: #fbfbfb;
             }
         }
     }
 }
 
-.container{
+.container {
     max-width: 1400px;
     margin: 0 auto;
+}
+
+/*** CV ***/
+.cv {
+    &_div_grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        &_left {
+            grid-column: 1 / 3;
+        }
+        &_mid {
+            grid-column: 3 / 5;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero_banner {
+        background-image: url(../../images/background-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 779px;
+    }
+    .banner_ux {
+        &_titre {
+            width: 310px;
+        }
+
+        &_card {
+            flex-direction: column;
+        }
+    }
+
+    .hero_banner_text {
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+            margin: 0 0 23px 0;
+        }
+    }
+
+    .banner_ux {
+        &_card {
+            .card {
+                h1 {
+                    font-size: 22px;
+                    margin: 10px;
+                }
+                p {
+                    font-size: 14px;
+                    margin: 0 0 33px 0;
+                }
+            }
+        }
+    }
 }

@@ -1,41 +1,157 @@
 <section class="hero_banner">
 
     <div class="hero_banner_text">
-            <h1><%= user.name %></h1>
-            <p><%= user.bio %></p>
-            <a href="#firstpart">
+        <h1>
+            <%= user.name %>
+        </h1>
+        <p>
+            <%= user.bio %>
+        </p>
+        <a href="#firstpart">
             <img src="icon/arrow_down.svg" alt="arrow go down agathe portfolio" class="icon_hero_banner" loading="lazy">
-            </a>
-    <% if(isAdmin == true){ %>
-        <a href="/user_edit">Modiifer</a>
-    <%}%>
+        </a>
+        <% if(isAdmin==true){ %>
+            <a href="/user_edit">Modiifer</a>
+            <%}%>
     </div>
 </section>
 <section class="banner_ux" id="firstpart">
-    <h1 class="banner_ux_titre"><%= user.title_card %></h1>
-    
+    <h1 class="banner_ux_titre">
+        <%= user.title_card %>
+    </h1>
+
     <div class="banner_ux_card container">
 
-        <% for(uxcard of cards){ %> 
+        <% for(uxcard of cards){ %>
 
-                <div class="card">
-                        <img src="icon/<%= uxcard.image  %>" alt="">
-                        <h1><%= uxcard.title  %></h1>
-                        <p><%= uxcard.content  %></p>
-                        <% if(isAdmin == true){ %>
-                            <a href="/card_edit/<%= uxcard.id_card %>">Modiifer</a>
-                        <%}%>
-                </div>
-                
-        <% } %>
+            <div class="card">
+                <img src="icon/<%= uxcard.image  %>" alt="">
+                <h1>
+                    <%= uxcard.title %>
+                </h1>
+                <p>
+                    <%= uxcard.content %>
+                </p>
+                <% if(isAdmin==true){ %>
+                    <a href="/card_edit/<%= uxcard.id_card %>">Modiifer</a>
+                    <%}%>
+            </div>
+
+            <% } %>
     </div>
-    
+
 </section>
 
 <section class="projets">
-    
-    <% if(isAdmin == true){ %>
+
+    <% if(isAdmin==true){ %>
         <a href="/add_project">Ajouter un projet</a>
         <a href="/dashboard">Voir la liste des projets</a>
-    <%}%>
+        <%}%>
 </section>
+
+<!--
+<section class="cv">
+    <h1 class="cv_title">Jeter un coup d’oeil à mon CV</h1>
+
+    <div class="cv_div_grid">
+        <div class="cv_div_grid_left">
+            <div class="cv_div_grid_left_first">
+                <p>Experience</p>
+                <div>
+                    <p class="title">Stages & Alternance</p>
+                    <span>11/20 - 08/21 <p>Alternance chez Leclerc de
+                            Loison-sous-Lens, chargée de
+                            communication</p></span>
+
+                    <span>02/2019 <p>Stage découverte à l’Office de tourisme
+                            de l Armentièrois</p></span>
+
+                    <span>11/20 - 08/21 <p>Stage découverte à l’Office de tourisme
+                            de l Armentièrois</p></span>
+
+                </div>
+                <div>
+                    <p class="title">Jobs étudiant</p>
+                    <span>06/20 - 08/20 <p>Magasinière chez Leclerc
+                            Loison-sous-Lens</p></span>
+
+                    <span>07/18 - 08/18
+                        07/19 - 08/19 <p>Magasinière à TCPA (Travaux
+                            Canalisation Patignier André)</p></span>
+
+                </div>
+
+            </div>
+            <div class="cv_div_grid_left_second">
+                <p>Compétences</p>
+                <div>
+
+                </div>
+            </div>
+        </div>
+        <div class="cv_div_grid_mid">
+            <div class="cv_div_grid_mid_first">
+
+                <p>Formation</p>
+                <div>
+                    <p class="title">Diplômes & Concours</p>
+                    <span>2020 - 2021 <p>Licence Créa-Web en
+                            alternance </p></span>
+
+                    <span>10/2020 <p>2nd à eGGULIVRR@LODZ</p></span>
+
+                    <span>2018-2020 <p>DUT Multimédia et Métiers de
+                            l’Internet</p></span>
+
+                </div>
+                <div>
+                    <p class="title">Associations</p>
+                    <span>09/2018 <p>Magasinière chez Leclerc Loison-sous-Lens</p></span>
+
+                    <span>Depuis 09/18 <p>Secrétaire de Jeux de papier, Je de paroles</p></span>
+
+                    <span>2014 - 2020 <p>Thêatre / Comédie musicale</p></span>
+
+                </div>
+            </div>
+            <div class="cv_div_grid_mid_second">
+
+                <div>
+                    <p>Soft Skills</p>
+                    <div>
+                        <div>
+
+                            <p>A l’écoute</p>
+                            <p>Patiente</p>
+                            <p>Persévérante</p>
+                        </div>
+                        <div>
+
+                            <p>Empathique</p>
+                            <p>Esprit d’équipe</p>
+                            <p>Curiosité</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Intérêt</p>
+                    <div>
+
+                        <p>Jeux de société</p>
+                        <p>Musée</p>
+                    </div>
+                    <div>
+                        <p>Culture vidéo ludique</p>
+                        <p>Peinture</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cv_div_grid_right">
+
+        </div>
+    </div>
+</section>-->

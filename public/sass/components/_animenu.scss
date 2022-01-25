@@ -1,0 +1,86 @@
+.outer-menu {
+	position: fixed;
+	display: none;
+	right: 0;
+	z-index: 1;
+	.checkbox-toggle {
+		position: absolute;
+		top: 34px;
+		right:0;
+		z-index: 99;
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+		opacity: 0;
+		&:checked {
+			& ~ .menu {
+				pointer-events: auto;
+				visibility: visible;
+				& > div {
+					transform: scale(1);
+					transition-duration: 0.75s;
+					& > div {
+						opacity: 1;
+						transition: opacity 0.4s ease 0.4s;
+					}
+				}
+			}
+		}
+	}
+	.menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		visibility: hidden;
+		overflow: hidden;
+		backface-visibility: hidden;
+		outline: 1px solid transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		& > div {
+			width: 300vw;
+			height: 300vw;
+			color: #fefefe;
+			background: #18322D;
+			border-radius: 50%;
+			transition: all 0.4s ease;
+			flex: none;
+			transform: scale(0);
+			backface-visibility: hidden;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			& > div {
+				text-align: center;
+				max-width: 90vw;
+				max-height: 100vh;
+				opacity: 0;
+				transition: opacity 0.4s ease;
+				overflow-y: auto;
+				flex: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				& > nav {
+					padding: 0 1em;
+					margin: 0;
+					display: flex!important;
+					flex-direction: column;
+					max-height: 100vh;
+
+					& > a {
+						position: relative;
+						display: inline;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
