@@ -1,17 +1,27 @@
-<section class="hero_banner">
+<section class="dashboard container">
 
-        <% for( projet of dashboard){ %> 
-            <div>
-                <h1><%= projet.title %> </h1>
-                <p><%= projet.description %></p>
+        <% for( projet of dashboard){ %>
+            
+
+    <div class="dashboard_projets">
+            <div class="dashboard_projets_content">
+                <h1>
+                    <%= projet.title %>
+                </h1>
+                <p>
+                    <%= projet.description %>
+                </p>
                 <img src="/img_projet/<%= projet.image_preview %>" alt="" style="width: 20%;">
             </div>
-            <div class="icon">
+            <div class="dashboard_projets_menu">
                 <a href="/edit/<%= projet.id %>">Modifier</a>
                 <a href="/delete/<%= projet.id %>">supprimer</a>
                 <a href="/projet/<%= projet.id %>">voir</a>
             </div>
-        <% } %>
+            
+    </div>
+            <% } %>
 
-        <h1><a href="/">Voir la page accueil</a></h1>
+                <h1><a href="/">Voir la page accueil</a></h1>
+
 </section>

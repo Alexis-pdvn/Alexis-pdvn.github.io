@@ -51,7 +51,6 @@ header{
           height: 4px;
           position: relative;
           left: 20px;
-          margin: 10px 0;
           background-color: #F3E247;
   
           &:nth-child(1) {
@@ -60,6 +59,7 @@ header{
           }
           &:nth-child(2) {
             width: 26px;
+            margin: 10px 0;
             transition-delay: 0.625s;
           }
           &:nth-child(3) {
@@ -75,7 +75,8 @@ header{
         margin: 0 auto;
         width: 40px;
         transform: rotate(45deg);
-        right: 5%;
+        right: 25%;
+        top: -18%;
   
         span {
           position: relative;

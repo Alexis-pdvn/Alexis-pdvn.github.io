@@ -1,0 +1,15 @@
+.dashboard {
+    &_projets {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        &_content {
+            grid-column: 1 / 3;
+        }
+
+        &_menu {
+            text-align: right;
+            grid-column: 3 / 3;
+        }
+    }
+}
